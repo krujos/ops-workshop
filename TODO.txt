@@ -1,0 +1,173 @@
+Root CA
+	CookBook for own RootCA w/ PCF. 
+	What's the cert chain, how does that work best w/ each LB implementation
+	
+Write cookbooks for each LB vendor.
+	Include some stuff about URL rewriting. 
+	
+	Big IP (F5)
+	NetScaler SDX, VPX.
+	NSX - Already Done.
+	ELB - Change / modify Dave's.
+	vCloud AIR - should look like ELB. 
+
+User Management: 
+
+What is a service account? 
+	A service account is an account used performs automated maintnence and operational activities against the foundation. It is not an account used for CI.
+	
+What is a CI account? 
+	A CI account works on behalf of a human.
+	
+	Documentation: Best Practice
+		What is a tennent in your enterprise
+		Your tenant has users
+			We think org should be 2 pizza teams.
+	
+	Talk Tracks: 
+		Why is this the best practice
+		It lets you go faster, experement faster fail faster
+		Faster feedback cycles
+		Automation for ticket based processes mitigates round trip onboard time. 
+		
+	Tooling: 
+		Onboarding app that creates LDAP/AD/SAML group
+		Creates the org
+		Addds & notifies the members
+		With default layout and space.
+
+	Documentation: How to add new users.
+	
+	
+	tempest: hates you... a lot.
+		Jumpbox w/ User access / auditable.
+		Lets talk to Matt R. 
+		
+	Operational users
+ 		   Service Accounts (watchman, cfops, pipelines, jmx consumer, "admin")
+		   They live in UAAC
+		   We build tooling (CF CLI PLUGIN)
+		   Talk tracks around why not LDAP/AD
+		   
+	CI Users 
+		-SAML users can't automate login
+		Best practice: 
+			CI user is pinned to the org lifetime
+			CI user lives in directory server
+			If you use SAML (minority) you put CI users in UAA because it's too hard/low value to automate.
+		Actions: 
+			We build tooling to produce ticket text for CI user for LDAP/AD
+			We build tooling (see above) for adding UAA user when SAML is the directory server. 
+			
+			
+Change Managment:
+	The point of service catalog
+		What is going to be comsumed
+		What are it's hours of operations
+		What are the service agreements
+		What are we tracking from a lifecycle perspective
+		
+		
+	PCF Shows up in a service catalog as a service type and should be tracked via service catalog.
+		Has many sub items 
+			Tiles
+		SLA
+		Maint Window
+		Which Components
+		A CI (catalog item) is an instantiation of the service type 
+			Each CI will have dependencies on types
+		
+		Inicident response in the service agreement should be responsible for commujnicating the following timelines
+			Mean time to resolution
+			Incident response time
+			escalation path 
+
+	Statment #1: Ops Teams should not track apps until they are production AI's. They should track by front end URL. It's the resposbility of the deployer (dev team or ops team (service owner)) to update the service catalog.
+	
+	Statment #2: Ops Teams should make sure to track / catalog applications which run in the platform that run the platform(garbage man, watchman, ooohimtelling, console, etc)
+	
+		Actions: 
+			whitepaper
+				Map PCF componenets to Service Catalog terms
+			
+				Create objective criteria for statment one, to make service catalog entry of an application an exceptional event, not the normal event. Create IP around how we make these decisions. 
+				Mockup Best Practice Change Management Procedures
+					i.e. tasks on ERS are not performed outside runtime window.
+					Blue Green deployments
+				
+			Blogpost: 
+				Hey, we hear a lot about ITIL, we don't care what you call it, heres how we suggest you manage PCF as a service in your Enterprise. See whitepaper.
+				
+Continious Smoke Tests: 
+	We run them via jenkins.
+	They are here <find the github repo>.
+	Dave should be assigned to this 
+	We run them every five min
+	It works because it works
+	
+	Chaos Lemur?
+	
+
+Foundation Estimation: 
+	When do you add another. 
+	How do you add another
+	
+	You need a sandbox for testing upgrades etc
+		This is in addition to any foundation which will host a workload. 
+	
+	What regs apply to the apps / data living in PCF
+		HIPPA, SOX, PCI, PII
+		This applies to data in flight as well as at rest. 
+		
+	You need a new one when crossing geo boundries
+		Layer 2 Stretch is a expensive idea.
+		BOSH doesn't handle it, it's built to give up at %20 failure
+		
+	Action:
+		Best practice, wtf why?
+	
+PCI 
+	we need a basic ref arch
+	in colobaration with Pivotal CSIO office 
+	major processes
+	working example
+	demoable to customers and the field
+	Bala Natarajan
+	
+Start / Stop Script 
+	Write a script, open source it. 
+	Recall that bosh stop dosen't stop the vm. 
+	Provide a disclaimer (John) about why this isn't a good idea in the general case. 
+		May not reduce risk in a recovery scinerio (Merlin)
+		It does save money in AWS, although there are better alternatives
+		
+Migrating from haproxy to a big boy load balancer
+	Action: Document the procedure in a cook book
+
+PSA: We beleive that we can equates HW LB's with a properly conigured NSX install. Significant engaugment advantage to having NSX/vShield edges for networks. 
+
+How does ops interact w/ app teams on Day 2 ===>
+	We said dev ops, how do our ops teams enable the tooling that the app teams need to do that effictvley. Empower the app teams.... Dev Ops does not mean no ops. 
+
+	ELK tile that lets you have logs for a temporary / debug view
+		gives you 1 day worth of logs
+		seperate from what the ops team sees. 
+	
+	How do the app teams make sense of the metrics they generate. Make sure this makes it to the app migration offering. 
+			How to understand appD metrics since the router obfuscates them?
+			
+	What about machine learning to watch app logs, this is normal, this is not normal, console to surface it. Give the ops teams visibility into what to look into. Don't grep for exception anymore. Anomoly detection.
+		Action: Interact with the data team. 
+		
+	Action: Blog Post, how to replace debuggers with logging and metrics. It's TDD and modern practices too. 
+	
+	Action: How do we help ops support the dev teams operating software on a platform they don't own.
+	
+Who supoports the software written for this offering
+	We want to get a packaged support agreement around it.
+		VMWare has a fee based support model for PS produced software
+	Can the PEZ team support these tools?
+				
+			
+	
+		

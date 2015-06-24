@@ -1,0 +1,70 @@
+Topics Include:
+
+[]realword networking 
+
+[x]Security
+  [|x]User Management
+  	LDAP - Conifg is hard
+	Keystone is hard
+
+		
+  <strike>PCI</strike> Justins group (but can we afford to wait)
+  	Defered until next week. 
+  <strike>PII</strike>
+	Defered until next week. 
+	
+    []Password rotation in PCF. 
+	[]What's in my platform? Oohdon't tellme.
+  
+--- OpsMan logs. 
+
+
+[]Auditing --- Bug in UAA.
+
+[]who supports code we write?
+
+[]BU / Restore
+  []bu / RESTORE WITHOUT CALLING SUPPORT
+[]DR
+
+[]Active / Active
+[]Active / Passive
+[]Routers, Load Balancers 
+
+[]apps / ops / lovefest / hatefest
+	Where do I get splunk? etc?
+
+[]One person veto power
+	[]Network
+	[]security
+	[]ops oriented. 
+		[]Named vm's... 
+		
+Donsies 
+[x]Minimize waste.
+
+[x]Monitoring
+[X]Logging
+[x]Alerting
+
+	[x]SSL Certs (justins got a bunch of feature content)
+		uploading
+		SAN Certs suck 
+		cert rotation 
+	
+	[x]RootCA (Citi, THD, GE, NBCU)
+
+[x]Change Management
+  [x]incident response
+  [x]ITIL
+  
+[x]continious smoke tests
+[x]Start / Stop PCF
+
+[x]Migrating from haproxy to F5 / NetScaler etc
+
+[x]http-keepalive
+
+	
+	
+	

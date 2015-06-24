@@ -1,0 +1,31 @@
+Monitoring / Logging
+
+	What metrics do I pay attention to? 
+	How do I use these metrics to make decisions
+		When do I add new DEA’s?
+		ets
+
+Actions: 
+	Develop IP and canned solution around the ELK stack for customers who want a perscriptve solution
+	Develop IP and canned solution around VROPS for customers who want a perscriptive solution
+	Write a whitepaper around the naritive 
+	
+Reccomendations: 
+	Develope a service offering specifically for integrating monitoring tools
+		This includes the narative / education / training about how we monitor the platform. 
+		
+	
+Bullets
+	Narritive (What we do, what you should do)
+		The platform is smart, but it's not a bunch of vms
+		we listen to different stuff
+		it's a virtual appliance, stop cracking it open 
+	Tool Gap
+		Show us the light
+			Prescriptive aproach, ELK, VROPS) 
+			
+		Make it work with my stuff
+			IP development
+			Run Book (more perscriptive than the whitepaper)
+		
+		
