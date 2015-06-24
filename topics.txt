@@ -40,6 +40,8 @@ Topics Include:
 	[]ops oriented. 
 		[]Named vm's... 
 		
+[]Best Practice for PCF on openstack
+
 Donsies 
 [x]Minimize waste.
 

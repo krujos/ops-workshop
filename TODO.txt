@@ -161,12 +161,15 @@ How does ops interact w/ app teams on Day 2 ===>
 		
 	Action: Blog Post, how to replace debuggers with logging and metrics. It's TDD and modern practices too. 
 	
+	Action: Tool for app id to app org/space/name
+	
 	Action: How do we help ops support the dev teams operating software on a platform they don't own.
 	
 Who supoports the software written for this offering
 	We want to get a packaged support agreement around it.
 		VMWare has a fee based support model for PS produced software
 	Can the PEZ team support these tools?
+	Discussion w/ Dino.
 				
 			
 	
