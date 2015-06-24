@@ -18,32 +18,27 @@ Topics Include:
   
 --- OpsMan logs. 
 
-
-[]Auditing --- Bug in UAA.
-
-[]who supports code we write?
-
-[]BU / Restore
-  []bu / RESTORE WITHOUT CALLING SUPPORT
-[]DR
-
-[]Active / Active
-[]Active / Passive
-[]Routers, Load Balancers 
-
-[]apps / ops / lovefest / hatefest
-	Where do I get splunk? etc?
-
 []One person veto power
 	[]Network
 	[]security
 	[]ops oriented. 
 		[]Named vm's... 
-		
-[]Best Practice for PCF on openstack
 
-Donsies 
+Donsies
+
+[x]Active / Active
+[x]Active / Passive
+	[x]Routers, Load Balancers 
+	
 [x]Minimize waste.
+
+[x]who supports code we write?
+
+[x]BU / Restore
+  [x]bu / RESTORE WITHOUT CALLING SUPPORT
+[x]DR
+
+[x]Best Practice for PCF on openstack
 
 [x]Monitoring
 [X]Logging
@@ -67,6 +62,8 @@ Donsies
 
 [x]http-keepalive
 
-	
+[x]Auditing --- Bug in UAA.
+
+
 	
 	

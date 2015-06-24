@@ -176,3 +176,85 @@ OpenStack Best Practice:
 	Action: 
 		Ramiro to write pamphlets 
 		
+BU/R
+	We need to provide a framework of the questions to be asked of the customer, and then how do we use those questions to define something actionable. 
+		System BU/DR
+		Service Backup
+		Business Continiuty. 
+		
+Auditing 
+	We need to surface the stuff in CCDB
+	We think this is a tool discussion
+		We think it can expose time slices and "platform ops"
+		Liberty was more concerned about auditing at the IaaS level. 
+		There are flags that can be enabled in bosh, but are not enabled via the PCF.
+		Can we make a product ask to togle plugins on. Turning on the SSH plugin would have addressed Liberties concern. 
+	
+	Action: 
+		We think product asks / PR's for enabling plugins
+			
+	Action: 
+		Build a tool to surface what we can from CC db and the event stream and be able to slice it by time.
+	
+
+Active / active, active passive
+
+	Action: 
+		Why would I do either one? Active / Active & Active / Passive? 
+			RTO, RPO
+
+	Active Active (Haydon/Duncan)
+		Action: 
+			Create whitepaper / arch diagrams / ingredients list that show what the limits are of running a single app across multiple foundations. What is possible, what is not, what's not worth it?
+	
+	Active / Passive?
+		Action: 
+			Create whitepaper / arch diagrams 
+			What data services are off the table
+			
+	Action: 
+		How do we sync auth?
+			Service accounts 
+		How do CI systems work?
+		What's the relationship to logging and monitoring (above)?
+		
+
+PSA: Don't offsite your UAADB, CCDB  etc and BlobStores when you have local installs. 
+			
+
+One Person Veto Power
+	Action: Lets get a workshop from folks who have done this longer than us. 
+		CDavis
+		
+Monitoring / Logging
+
+	What metrics do I pay attention to? 
+	How do I use these metrics to make decisions
+		When do I add new DEA’s?
+		ets
+
+Actions: 
+	Develop IP and canned solution around the ELK stack for customers who want a perscriptve solution
+	Develop IP and canned solution around VROPS for customers who want a perscriptive solution
+	Write a whitepaper around the naritive 
+	
+Reccomendations: 
+	Develope a service offering specifically for integrating monitoring tools
+		This includes the narative / education / training about how we monitor the platform. 
+		
+	
+Bullets
+	Narritive (What we do, what you should do)
+		The platform is smart, but it's not a bunch of vms
+		we listen to different stuff
+		it's a virtual appliance, stop cracking it open 
+	Tool Gap
+		Show us the light
+			Prescriptive aproach, ELK, VROPS) 
+			
+		Make it work with my stuff
+			IP development
+			Run Book (more perscriptive than the whitepaper)
+		
+		
+		
