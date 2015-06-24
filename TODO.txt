@@ -172,5 +172,7 @@ Who supoports the software written for this offering
 	Discussion w/ Dino.
 				
 			
-	
+OpenStack Best Practice:
+	Action: 
+		Ramiro to write pamphlets 
 		
