@@ -18,11 +18,6 @@ Topics Include:
   
 --- OpsMan logs. 
 
-[]One person veto power
-	[]Network
-	[]security
-	[]ops oriented. 
-		[]Named vm's... 
 
 Donsies
 
@@ -64,6 +59,10 @@ Donsies
 
 [x]Auditing --- Bug in UAA.
 
-
+[]One person veto power
+	[]Network
+	[]security
+	[]ops oriented. 
+		[]Named vm's...
 	
 	
